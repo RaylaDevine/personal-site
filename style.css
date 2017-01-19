@@ -1,0 +1,968 @@
+/*
+Theme Name: Sliding Portfolio
+Theme URI: http://underscores.me/
+Author: RaShaun Eshalomi
+Author URI: http://rashauneshalomi.com/
+Description: Portfolio website
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: slidingportfolio
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Sliding Portfolio is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+## Links
+## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+## Posts and pages
+## Comments
+# Infinite scroll
+# Media
+## Captions
+## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, .8);
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: .6em 1em .4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    border-color: #ccc #bbb #aaa;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    border-color: #aaa #bbb #bbb;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+select {
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    color: #111;
+}
+
+textarea {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+    margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+/* ------ CUSTOM STYLES ------ */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 100%;
+    text-align: center;
+}
+
+.logged-in body {
+    top: 32px;
+}
+
+#skills,
+#projects,
+#work,
+#contact,
+#cando {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#about,
+#skills,
+#contact,
+.six,
+#cando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content,
+.skills-content,
+.contact-content,
+.cando-content {
+    line-height: 1.5;
+}
+
+.skills-content p,
+.cando-content p {
+    font-size: 3.5em;
+}
+
+.title {
+    font-size: 5.5em;
+    margin-top: 50px;
+}
+
+
+/* ------ SCROLL BAR ------ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 76, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 76, 0.8);
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar:horizontal {
+    width: 0;
+    height: 0;
+}
+
+/* ------ NAV SECTION ------ */
+nav {
+    position: fixed;
+    font-size: 2.3em;
+    z-index: 1;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#responsive-menu-button {
+    outline-color: #1a518b;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    padding: 5px 10px;
+    background-color: #1a518b;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+nav a,
+nav a:visited,
+nav a:active,
+nav a:focus {
+    text-decoration: none;
+    color: #cb26c9;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #898b1a;
+}
+
+/* ------ HERO SECTION ------ */
+.hero {
+    position: relative;
+    background: #000000 url("/wp-content/themes/slidingportfolio/assets/img/rae-blur.jpg") no-repeat;
+    background-position: 100% 40%;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 8em;
+    color: #cb26c9;
+    text-shadow: 3px 3px black;
+    margin-bottom: 0;
+}
+
+.banner p {
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/* ------ ABOUT SECTION ------ */
+
+#about {
+    background-color: #1a898b;
+    border: solid 10px #309496;
+}
+
+.about-content {
+    font-size: 3.5em;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+/* ------ CANDO SECTION ------ */
+
+#cando {
+    background-color: #cb26c9;
+    border: solid 10px #da67d9;
+}
+
+.cando-content h2 span {
+    background-color: #1a518b;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: #cb26c9;
+}
+
+/* ------ WORK & PROJECT SECTIONS ------ */
+#work,
+#projects {
+    background-color: #898b1a;
+    border: solid 10px #949630;
+    overflow: hidden;
+}
+
+.work-content a, 
+.work-content a:visited {
+    color: #002f61;
+    font-weight: bold;
+}
+
+.slide {
+    position: absolute;
+    background-color: #898b1a;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+#work-inprogress h2 {
+    color: #ffff4c;
+}
+
+#work-inprogress p {
+    color: #ffffff;
+}
+
+#work .btn-primary,
+#projects .btn-primary {
+    color: #fff;
+    background-color: #1a518b;
+    border-color: #1f4b71;
+}
+
+#work .btn p,
+#projects .btn p {
+    margin: 0;
+    font-size: 1.7em;
+}
+
+/* ------ SCREENSHOT SLIDE SECTION ------ */
+.screenshots {
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.shot {
+    margin-bottom: 10px;
+    width: 350px;
+    height: 250px;
+}
+
+.shot img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ------ CONTACT SECTION ------ */
+#contact {
+    background-color: #8b1c1a;
+    border: solid 10px #a24947;
+}
+.contact-description {
+    font-family: 'Raleway', sans-serif;
+}
+.contact-address {
+    font-size: 3.5em;
+    color: #cb26c9
+}
+
+.contact-address a {
+    color: #cb26c9;
+}
+
+.fa-arrow-up {
+    bottom: 2em;
+    font-size: 25px;
+    color: #1a518b;
+}
+
+/* ------ SINGLE POST ------ */
+body.single,
+body.page-id-32 {
+    background-color: #1a898b;
+}
+
+#single img {
+    padding: 2em 0 2em;
+}
+
+.single-content p {
+    text-align: left;
+    font-size: 2em;
+}
+
+/* ------ ABOUT ME PAGE ------ */
+#about-me {
+    background-color: #1a898b;
+    padding-top: 2em;
+}
+.aboutme-content p {
+    font-size: 2em;
+}
+
+/* ------ SKILLS PAGE ------ */
+i.fa.fa-database {
+    padding: 0 5px 0 5px;
+    color: #103154;
+    line-height: 5em;
+    vertical-align: bottom;
+    font-size: .3em;
+}
+
+/* ------ ATTACHMENT PAGE ------ */
+.resolutions {
+    text-align: center;
+    font-size: 2em;
+}
+.entry a {
+    color: #1a518b;
+    font-weight: bold;
+}
+
+/* ------ PACKAGES PAGE ------ */
+#packages {
+    background-color: #898b1a;
+    color: black;
+}
+
+.row-bg {
+    background-color: #006B6D;
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 1.96));
+    padding: 0 150px 20px 200px;
+}
+
+#packages .title,
+.product-name,
+.client-provides {
+    text-align: center;
+}
+
+#packages .title,
+.addon-title,
+.addon-timeline,
+.addon-rate,
+.right-package h3 {
+    color: #0c6869;
+    text-shadow: 1px 1px black;
+}
+
+#packages p {
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+.product-name {
+    color: #898b1a;
+    font-size: 3em;
+    text-shadow: 2px 2px 1px black;
+}
+
+.client-provides {
+    width: 50%;
+    margin: 0 auto;
+    color: #1a518b;
+}
+
+.client-provides ul {
+    list-style-position: inside;
+    font-size: 2em;
+    padding: 0;
+    color: #ffffff;
+}
+
+.client-provides p {
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+}
+
+.product-timeline,
+.product-rate {
+    font-size: 2em;
+    color: #898b1a;
+    text-shadow: 1px 1px 1px black; 
+}
+
+.addon-timeline,
+.addon-rate {
+    font-size: 2em;
+}
+
+.contact-link a {
+    color: #006B6D;
+    font-weight: bold;
+}
+
+/* ------ MEDIA QUERIES ------ */
+@media screen and (max-width: 1024px) {
+    #about,
+    #projects,
+    #work,
+    #contact,
+    #cando {
+        height: auto;
+        width: 100%;
+    }
+    #skills {
+        height: 100vh;
+    }
+    header {
+        min-height: 100%;
+        min-width: 100%;
+    }
+    .slide {
+        position: relative;
+    }
+    .contact-address {
+        font-size: 1.5em;
+    }
+    .contact-description {
+        font-size: 2em;
+    }
+    .about-content {
+        font-size: 2.3em;
+    }
+    .skills-content p,
+    .cando-content p {
+        font-size: 2em;
+    }
+    .title {
+        margin-top: 16px;
+        font-size: 4em; 
+    }
+    .banner h1 {
+        font-size: 7em;
+    }
+    .banner p {
+        font-size: 2em;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .row-bg {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logged-in button#responsive-menu-button {
+        top: 50px;
+    }
+    .shot {
+        width: 100%;
+        overflow: hidden;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .slide p {
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+    .hero {
+        background-position: top left;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .work-content img,
+    #work-inprogress img,
+    .single-content img { 
+        width: 300px;
+    }
+    #skills {
+        min-height: 100%;
+    }
+    #work .btn p,
+    #projects .btn p {
+        font-size: 1em;
+    }
+}
+.page-header {
+    border-bottom: none;
+}
+div.page-content p.error {
+    font-size: 4em;
+    text-align: center;
+}
+div.page-content p.error a {
+    text-decoration: none;
+}
+div.page-content p.error a,
+div.page-content p.error a:visited {
+    color: #cb26c9;
+}
+div.page-content p.error a:hover {
+    color: #1a518b;
+}
